@@ -29,6 +29,7 @@ import Layout from "../../components/Layout";
 import Header from "../../components/Header";
 
 import "./Receipt.scss";
+import { useNavigate } from "react-router-dom";
 
 const ReceiptForm = () => {
   const [tools, setTools] = useState([
@@ -59,7 +60,7 @@ const ReceiptForm = () => {
       )
     );
   };
-
+const navigate = useNavigate();
   return (
     <Layout>
       <div className="receipt-page">
@@ -86,7 +87,7 @@ const ReceiptForm = () => {
                       Auto-saved 2 min ago
                     </div>
         
-                    <button className="cancel-btn">
+                    <button className="cancel-btn" onClick={() => navigate(-1)}>
               <i className="fa-solid fa-xmark"></i>
               Cancel
             </button>

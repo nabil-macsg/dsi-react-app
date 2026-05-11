@@ -3,12 +3,12 @@ import React, { useMemo, useState } from "react";
 import "./Tools.scss";
 import Layout from "../../components/Layout";
 import Header from "../../components/Header";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 
 export default function AddTool() {
-
+const navigate = useNavigate();
   return (
     <Layout>
       <Header
@@ -16,26 +16,28 @@ export default function AddTool() {
         breadcrumb={<div className="breadcrumb">
           <i className="fa fa-screwdriver-wrench" ></i>
           Tools
-
           <i className="fa-solid fa-chevron-right" ></i>
           <span>New Tool</span>
         </div>}
         rightContent={
           <>
-            <button className="cancel-btn">
-              <i className="fa-solid fa-xmark"></i>
-              Cancel
-            </button>
+           {/* CANCEL - Goes back to previous page */}
+    <button className="cancel-btn" onClick={() => navigate(-1)}>
+      <i className="fa-solid fa-xmark"></i>
+      Cancel
+    </button>
 
-            <button className="draft-btn">
-              <i className="fa-regular fa-floppy-disk"></i>
-              Save Draft
-            </button>
+    {/* SAVE DRAFT */}
+    <button className="draft-btn"  onClick={() => navigate(-1)}>
+      <i className="fa-regular fa-floppy-disk"></i>
+      Save Draft
+    </button>
 
-            <button className="submit-btn" disabled>
-              <i className="fa-solid fa-paper-plane"></i>
-              Submit Tool
-            </button>
+    {/* SUBMIT */}
+    <button className="submit-btn"  onClick={() => navigate(-1)} >
+      <i className="fa-solid fa-paper-plane"></i>
+      Submit Tool
+    </button>
           </>
         }
       />
