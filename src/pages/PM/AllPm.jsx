@@ -85,6 +85,118 @@ const maintenanceData = [
     priority: "medium",
     jobCategory: "stripdown"
   },
+  {
+    jobRef: "MJN-2026-061",
+    toolSn: "HYD700BP518",
+    toolType: "7\" PBL High Torque",
+    jobType: "Service",
+    location: "DSI FZE Yard",
+    agent: "Nile Drilling",
+    technician: "Rahul Menon",
+    techInitials: "RM",
+    techColor: "#8E44AD",
+    status: "Completed",
+    created: "18 Dec 2025",
+    dueDate: "18 Jun 2026",
+    priority: "low",
+    jobCategory: "service"
+  },
+  {
+    jobRef: "MJN-2026-066",
+    toolSn: "HYD350BP127",
+    toolType: "3-1/2\" PBL Compact",
+    jobType: "Repair",
+    location: "DSI Service Bay",
+    agent: "PetroServe India",
+    technician: "Ganeshkumar",
+    techInitials: "GK",
+    techColor: "#1E8449",
+    status: "Overdue",
+    created: "22 Sep 2025",
+    dueDate: "22 Mar 2026",
+    priority: "high",
+    jobCategory: "repair"
+  },
+  {
+    jobRef: "MJN-2026-071",
+    toolSn: "HYD875BP602",
+    toolType: "8-3/4\" PBL High Flow",
+    jobType: "Inspection",
+    location: "KazDrill Facility",
+    agent: "KazMunay Tools",
+    technician: "Ruslan Akhmetov",
+    techInitials: "RA",
+    techColor: "#2471A3",
+    status: "Open",
+    created: "11 Jan 2026",
+    dueDate: "11 Jul 2026",
+    priority: "medium",
+    jobCategory: "inspection"
+  },
+  {
+    jobRef: "SD-2026-018",
+    toolSn: "HYD600BP289",
+    toolType: "6\" PBL Sub",
+    jobType: "Strip Down",
+    location: "DSI FZE Yard",
+    agent: "Al Mansoori",
+    technician: "Sujithkumar",
+    techInitials: "SJ",
+    techColor: "#D35400",
+    status: "In progress",
+    created: "08 May 2026",
+    dueDate: "22 May 2026",
+    priority: "medium",
+    jobCategory: "stripdown"
+  },
+  {
+    jobRef: "MJN-2026-079",
+    toolSn: "HYD775BP455",
+    toolType: "7-3/4\" PBL High Torque",
+    jobType: "Service",
+    location: "Agent site",
+    agent: "PetroServe India",
+    technician: "Anil Kumar",
+    techInitials: "AK",
+    techColor: "#16A085",
+    status: "Open",
+    created: "30 Dec 2025",
+    dueDate: "30 Jun 2026",
+    priority: "medium",
+    jobCategory: "service"
+  },
+  {
+    jobRef: "MJN-2026-084",
+    toolSn: "HYD925BP731",
+    toolType: "9-1/4\" PBL High Flow",
+    jobType: "Repair",
+    location: "KazDrill Facility",
+    agent: "KazDrill Services",
+    technician: "Yerlan Sadykov",
+    techInitials: "YS",
+    techColor: "#2C3E50",
+    status: "Overdue",
+    created: "01 Oct 2025",
+    dueDate: "01 Apr 2026",
+    priority: "high",
+    jobCategory: "repair"
+  },
+  {
+    jobRef: "SD-2026-021",
+    toolSn: "HYD450BP188",
+    toolType: "4-1/2\" PBL Compact",
+    jobType: "Strip Down",
+    location: "DSI Africa Hub",
+    agent: "DSI Africa Hub",
+    technician: "Samuel Adeyemi",
+    techInitials: "SA",
+    techColor: "#7D3C98",
+    status: "Completed",
+    created: "14 Jan 2026",
+    dueDate: "14 Jul 2026",
+    priority: "low",
+    jobCategory: "stripdown"
+  },
 ];
 
 export default function AllPm() {
@@ -136,7 +248,7 @@ export default function AllPm() {
             <button className="topbar-btn"><i className="fa-solid fa-download"></i></button>
             <button className="topbar-btn"><i className="fa-solid fa-sliders"></i></button>
             <button className="add-btn">
-                
+
               <i className="fa-solid fa-plus"></i> <Link to="/pm/add"> New Job</Link>
             </button>
           </>
@@ -216,7 +328,7 @@ export default function AllPm() {
           {/* TABS */}
           <div className="tab-bar">
             <div className="tab active">All jobs <span className="tab-count">27</span></div>
-            <div className="tab">Overdue <span className="tab-count" style={{background: "#C0392B", color: "#fff"}}>6</span></div>
+            <div className="tab">Overdue <span className="tab-count" style={{ background: "#C0392B", color: "#fff" }}>6</span></div>
             <div className="tab">In progress <span className="tab-count normal">11</span></div>
             <div className="tab">Open / Pending <span className="tab-count normal">10</span></div>
             <div className="tab">Pending approval <span className="tab-count normal">4</span></div>

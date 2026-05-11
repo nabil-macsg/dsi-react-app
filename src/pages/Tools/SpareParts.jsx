@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from "react";
-import "./Tools.scss"; 
-import "./SpareParts.scss"; 
+import "./Tools.scss";
+import "./SpareParts.scss";
 
 import Layout from "../../components/Layout";
 import Header from "../../components/Header";
@@ -59,6 +59,69 @@ const sparePartsData = [
     usedInMaintenance: 35,
     balanceInHand: -7,
     lastDispatchDate: "10 May 2026",
+  },
+  {
+    partType: "Bearing Assembly",
+    partNo: "BRG-820-HF",
+    agent: "KazMunay Tools",
+    previouslyDispatched: 22,
+    usedInMaintenance: 17,
+    balanceInHand: 5,
+    lastDispatchDate: "14 May 2026",
+  },
+  {
+    partType: "Hydraulic Piston Kit",
+    partNo: "HPK-950-X",
+    agent: "PetroServe India",
+    previouslyDispatched: 11,
+    usedInMaintenance: 9,
+    balanceInHand: 2,
+    lastDispatchDate: "09 May 2026",
+  },
+  {
+    partType: "Seal Kit - High Temp",
+    partNo: "SKHT-525",
+    agent: "Nile Drilling",
+    previouslyDispatched: 26,
+    usedInMaintenance: 21,
+    balanceInHand: 5,
+    lastDispatchDate: "11 May 2026",
+  },
+  {
+    partType: "Activation Ball 3.50\"",
+    partNo: "ACT350-992",
+    agent: "Halliburton UAE",
+    previouslyDispatched: 19,
+    usedInMaintenance: 14,
+    balanceInHand: 5,
+    lastDispatchDate: "13 May 2026",
+  },
+  {
+    partType: "Lock Sleeve",
+    partNo: "LSV-447-A",
+    agent: "KazDrill Services",
+    previouslyDispatched: 8,
+    usedInMaintenance: 10,
+    balanceInHand: -2,
+    lastDispatchDate: "07 May 2026",
+  },
+  {
+    partType: "Dart 3.00\"",
+    partNo: "DART-300-X",
+    agent: "Al Mansoori",
+    previouslyDispatched: 17,
+    usedInMaintenance: 12,
+    balanceInHand: 5,
+    lastDispatchDate: "16 May 2026",
+  },
+  {
+    partType: "O-Ring Kit",
+    partNo: "ORK-825",
+    agent: "Saipem Nigeria",
+    previouslyDispatched: 34,
+    usedInMaintenance: 30,
+    balanceInHand: 4,
+    lastDispatchDate: "15 May 2026",
   },
 ];
 
