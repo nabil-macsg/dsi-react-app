@@ -15,6 +15,6 @@ export default function Sidebar() {
         {section.items.map(item => <div key={item.text} className={`nav-item ${item.active ? 'active' : ''}`}><i className={`fa-solid ${item.icon}`}></i>{item.text}{item.badge && <span className={`nav-badge ${item.alert ? 'alert' : ''}`}>{item.badge}</span>}</div>)}
       </div>)}
     </nav>
-    <div className="sidebar-footer"><div className="user-row"><div className="user-avatar">SK</div><div className="user-details"><div className="user-name">Shafi Karunan</div><div className="user-role">QA Supervisor — DSI FZE</div></div><div className="logout-btn"><i className="fa-solid fa-arrow-right-from-bracket"></i></div></div></div>
+    <div className="sidebar-footer"><div className="user-row"><div className="user-avatar">SK</div><div className="user-details"><div className="user-name">Nabil Uchummal</div><div className="user-role">QA Supervisor — DSI FZE</div></div><div className="logout-btn"><i className="fa-solid fa-arrow-right-from-bracket"></i></div></div></div>
   </aside>
 }
