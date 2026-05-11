@@ -126,6 +126,30 @@ const toolsData = [
     dueSeverity: "warn",
     cost: "66,500",
   },
+  {
+    sn: "HYD450BP188",
+    type: "PBL Compact",
+    size: '4-1/2"',
+    status: "In storage",
+    region: "Africa",
+    agent: "DSI Africa Hub",
+    lastService: "14 Jan 2026",
+    nextDue: "14 Jul 2026",
+    dueSeverity: "ok",
+    cost: "39,500",
+  },
+  {
+    sn: "HYD925BP731",
+    type: "PBL High Flow",
+    size: '9-1/4"',
+    status: "Under maintenance",
+    region: "Central Asia",
+    agent: "KazDrill Services",
+    lastService: "01 Oct 2025",
+    nextDue: "01 Apr 2026",
+    dueSeverity: "overdue",
+    cost: "88,000",
+  },
 ];
 
 const statusClasses = {

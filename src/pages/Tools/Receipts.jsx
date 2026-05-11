@@ -50,6 +50,83 @@ const receiptsData = [
     condition: "Good",
     discrepancies: 0,
   },
+  {
+    receiptId: "RC-2026-022",
+    dtRef: "DT-11005318",
+    toolsCount: 1,
+    toolsDetail: '5-1/4" PBL Sub',
+    receivedDate: "13 May 2026",
+    receivedBy: "Rahul Menon",
+    status: "Completed",
+    condition: "Good",
+    discrepancies: 0,
+  },
+  {
+    receiptId: "RC-2026-023",
+    dtRef: "DT-11005322",
+    toolsCount: 2,
+    toolsDetail: '7" PBL High Torque × 2',
+    receivedDate: "16 May 2026",
+    receivedBy: "Anil Kumar",
+    status: "Pending Verification",
+    condition: "Pending",
+    discrepancies: 0,
+  },
+  {
+    receiptId: "RC-2026-024",
+    dtRef: "DT-11005327",
+    toolsCount: 1,
+    toolsDetail: '6" PBL Sub',
+    receivedDate: "18 May 2026",
+    receivedBy: "David Okoro",
+    status: "Completed with Notes",
+    condition: "Minor Damage",
+    discrepancies: 1,
+  },
+  {
+    receiptId: "RC-2026-025",
+    dtRef: "DT-11005331",
+    toolsCount: 4,
+    toolsDetail: '8-3/4" PBL High Flow × 4',
+    receivedDate: "19 May 2026",
+    receivedBy: "Yerlan Sadykov",
+    status: "Completed",
+    condition: "Good",
+    discrepancies: 0,
+  },
+  {
+    receiptId: "RC-2026-026",
+    dtRef: "DT-11005336",
+    toolsCount: 1,
+    toolsDetail: '4-1/2" PBL Compact',
+    receivedDate: "17 May 2026",
+    receivedBy: "Samuel Adeyemi",
+    status: "Completed",
+    condition: "Good",
+    discrepancies: 0,
+  },
+  {
+    receiptId: "RC-2026-027",
+    dtRef: "DT-11005341",
+    toolsCount: 2,
+    toolsDetail: '9-1/4" PBL High Flow × 2',
+    receivedDate: "20 May 2026",
+    receivedBy: "Ruslan Akhmetov",
+    status: "Completed with Notes",
+    condition: "Seal Issue",
+    discrepancies: 2,
+  },
+  {
+    receiptId: "RC-2026-028",
+    dtRef: "DT-11005349",
+    toolsCount: 3,
+    toolsDetail: '6-3/4" PBL Sub × 3',
+    receivedDate: "18 May 2026",
+    receivedBy: "Fahad Al Marri",
+    status: "Completed",
+    condition: "Good",
+    discrepancies: 0,
+  },
 ];
 
 export default function Receipts() {
@@ -99,8 +176,8 @@ export default function Receipts() {
               <i className="fa-solid fa-sliders"></i>
             </button>
             <button className="add-btn">
-                <Link to={'/receipt/detail'}>  
-              <i className="fa-solid fa-plus"></i> New Receipt</Link>
+              <Link to={'/receipt/detail'}>
+                <i className="fa-solid fa-plus"></i> New Receipt</Link>
             </button>
           </>
         }
@@ -195,7 +272,7 @@ export default function Receipts() {
 
                       {/* Clickable Receipt ID - Goes to /receipt/detail */}
                       <td className="mono">
-                        <Link 
+                        <Link
                           to="/receipt/detail"
                           className="receipt-link"
                           onClick={(e) => e.stopPropagation()}
@@ -225,7 +302,7 @@ export default function Receipts() {
                       <td>
                         <div className="row-actions">
                           <button className="row-btn">
-                            <Link 
+                            <Link
                               to="/receipt/detail"
                               onClick={(e) => e.stopPropagation()}
                             >
