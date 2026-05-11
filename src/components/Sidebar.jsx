@@ -22,7 +22,7 @@ const sections = [
       { icon: 'fa-truck', text: 'Movements', badge: '7', to: '/movements' },
       { icon: 'fa-paper-plane', text: 'All Dispatch', to: '/dispatch/all' },
       { icon: 'fa-receipt', text: 'Acknowledges and Receipts', to: '/receipts' },
-      // { icon: 'fa-boxes-stacked', text: 'Spare Parts', to: '/spare-parts' }
+      { icon: 'fa-boxes-stacked', text: 'Spare Parts', to: '/pm/spareparts' }
     ]
   },
   { 

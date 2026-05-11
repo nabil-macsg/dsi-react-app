@@ -1,0 +1,22 @@
+.balance-badge {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.balance-badge.ok {
+  background: #eafaf1;
+  color: #1e8449;
+}
+
+.balance-badge.low {
+  background: #fdf2f1;
+  color: #c0392b;
+  font-weight: 700;
+}
+
+/* Optional: Highlight negative balance */
+.balance-badge.low::after {
+  content: " ⚠";
+}

@@ -15,6 +15,7 @@ import AllDispatch from './pages/Tools/AllDispatch'
 import Receipts from './pages/Tools/Receipts'
 import Retirements from './pages/Tools/Retirements'
 import AddRetirement from './pages/Tools/AddRetirement'
+import SpareParts from './pages/Tools/SpareParts'
 
 export default function App() {
   const appRouter = createBrowserRouter([
@@ -57,6 +58,10 @@ export default function App() {
     {
       path:"/pm/strip-down",
       element:<StripDown/>
+    },
+    {
+      path:"/pm/spareparts",
+      element:<SpareParts/>
     },
      {
       path:"/receipts",
