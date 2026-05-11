@@ -2,6 +2,8 @@ import { Bar, Doughnut } from 'react-chartjs-2'
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, ArcElement, Tooltip } from 'chart.js'
 import Toolbar from '../../components/Toolbar'
 import './Dashboard.scss'
+import Layout from '../../components/Layout'
+import Header from '../../components/Header'
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, ArcElement, Tooltip)
 
@@ -47,16 +49,21 @@ const donutOptions = { responsive: true, maintainAspectRatio: false, cutout: '68
 
 export default function Dashboard() {
   return <>
-    <div className="alert-banner"><div className="alert-icon"><i className="fa-solid fa-triangle-exclamation"></i></div><div className="alert-text"><strong>Quality alert:</strong> Batch HTSEDM417968 seal kits flagged for inspection — do not dispatch until cleared. Issued by QA team · 2 hours ago.</div><div className="alert-dismiss">View alert →</div></div>
+    <Layout>
+      <Header/>
+      <div className="scroll-body">
+      <div className="alert-banner"><div className="alert-icon"><i className="fa-solid fa-triangle-exclamation"></i></div><div className="alert-text"><strong>Quality alert:</strong> Batch HTSEDM417968 seal kits flagged for inspection — do not dispatch until cleared. Issued by QA team · 2 hours ago.</div><div className="alert-dismiss">View alert →</div></div>
 
-    <div className="kpi-row">{kpis.map(([label, value, footer, trend, icon, color]) => <div className="kpi-card" key={label}><div className="kpi-top"><div className="kpi-label">{label}</div><div className={`kpi-icon-wrap ${color}`}><i className={`fa-solid ${icon}`}></i></div></div><div className="kpi-value">{value}</div><div className={`kpi-footer ${trend}`}>{trend === 'up' && <i className="fa-solid fa-arrow-up"></i>}{trend === 'down' && <i className="fa-solid fa-circle-exclamation"></i>}{footer}</div></div>)}</div>
+      <div className="kpi-row">{kpis.map(([label, value, footer, trend, icon, color]) => <div className="kpi-card" key={label}><div className="kpi-top"><div className="kpi-label">{label}</div><div className={`kpi-icon-wrap ${color}`}><i className={`fa-solid ${icon}`}></i></div></div><div className="kpi-value">{value}</div><div className={`kpi-footer ${trend}`}>{trend === 'up' && <i className="fa-solid fa-arrow-up"></i>}{trend === 'down' && <i className="fa-solid fa-circle-exclamation"></i>}{footer}</div></div>)}</div>
 
-    <div className="mid-row">
-      <div className="card"><Toolbar title="Movement activity — dispatches vs returns (last 6 months)" actionText="View all movements →" /><div className="legend-row"><div className="legend-item"><div className="legend-sq" style={{ background: '#C0392B' }} /> Dispatches</div><div className="legend-item"><div className="legend-sq" style={{ background: '#2471A3' }} /> Returns</div></div><div className="chart-box"><Bar data={barData} options={barOptions} /></div></div>
-      <div className="card"><Toolbar title="Tools by status" actionText="Full breakdown →" /><div className="donut-wrap"><div className="donut-box"><Doughnut data={donutData} options={donutOptions} /></div><div className="donut-legend">{donutItems.map(([label, count, color]) => <div className="donut-line" key={label}><div className="donut-left"><div className="donut-color" style={{ background: color }} />{label}</div><div className="donut-count">{count}</div></div>)}</div></div></div>
-    </div>
+      <div className="mid-row">
+        <div className="card"><Toolbar title="Movement activity — dispatches vs returns (last 6 months)" actionText="View all movements →" /><div className="legend-row"><div className="legend-item"><div className="legend-sq" style={{ background: '#C0392B' }} /> Dispatches</div><div className="legend-item"><div className="legend-sq" style={{ background: '#2471A3' }} /> Returns</div></div><div className="chart-box"><Bar data={barData} options={barOptions} /></div></div>
+        <div className="card"><Toolbar title="Tools by status" actionText="Full breakdown →" /><div className="donut-wrap"><div className="donut-box"><Doughnut data={donutData} options={donutOptions} /></div><div className="donut-legend">{donutItems.map(([label, count, color]) => <div className="donut-line" key={label}><div className="donut-left"><div className="donut-color" style={{ background: color }} />{label}</div><div className="donut-count">{count}</div></div>)}</div></div></div>
+      </div>
 
-    <div className="bot-row"><RegionCard /><MaintenanceCard /><ActivityCard /></div>
+      <div className="bot-row"><RegionCard /><MaintenanceCard /><ActivityCard /></div>
+      </div>
+    </Layout>
   </>
 }
 

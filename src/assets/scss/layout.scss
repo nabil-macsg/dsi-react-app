@@ -9,6 +9,9 @@
 .sync-dot { width: 6px; height: 6px; border-radius: 50%; background: #27AE60; animation: pulse 2s infinite; }
 @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
 .topbar-btn { width: 34px; height: 34px; border-radius: var(--radius-sm); border: 1px solid var(--border); background: var(--bg-card); display: flex; align-items: center; justify-content: center; cursor: pointer; color: var(--text-secondary); font-size: 14px; }
+.add-btn{display:flex;align-items:center;gap:7px;background:var(--dsi-red);color:#fff;border:none;border-radius:var(--radius-sm);padding:0 14px;height:34px;font-size:13px;font-weight:500;cursor:pointer;font-family:var(--font);}
+.breadcrumb{display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--text-tertiary);}
+.breadcrumb span{color:var(--text-primary);font-weight:500;}
 .topbar-btn:hover { background: var(--bg-secondary); }
 .topbar-btn.has-dot { position: relative; }
 .topbar-btn.has-dot::after { content:''; position:absolute; top:7px; right:7px; width:7px; height:7px; border-radius:50%; background:var(--dsi-red); border:1.5px solid var(--bg-card); }
