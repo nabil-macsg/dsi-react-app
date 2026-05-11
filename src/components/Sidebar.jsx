@@ -5,7 +5,7 @@ const sections = [
     label: 'Overview', 
     items: [
       { icon: 'fa-gauge-high', text: 'Dashboard', active: true, to: '/' },
-      { icon: 'fa-bell', text: 'Alerts', badge: '3', alert: true, to: '/alerts' }
+      // { icon: 'fa-bell', text: 'Alerts', badge: '3', alert: true, to: '/alerts' }
     ]
   },
   { 
@@ -20,8 +20,9 @@ const sections = [
     label: 'Tool Movement', 
     items: [
       { icon: 'fa-truck', text: 'Movements', badge: '7', to: '/movements' },
-      { icon: 'fa-paper-plane', text: 'New Dispatch', to: '/dispatch/add' },
-      { icon: 'fa-boxes-stacked', text: 'Spare Parts', to: '/spare-parts' }
+      { icon: 'fa-paper-plane', text: 'All Dispatch', to: '/dispatch/all' },
+      { icon: 'fa-receipt', text: 'Acknowledges and Receipts', to: '/receipts' },
+      { icon: 'fa-boxes-stacked', text: 'Spare Parts', to: '/pm/spareparts' }
     ]
   },
   { 
@@ -29,14 +30,14 @@ const sections = [
     items: [
       { icon: 'fa-gear', text: 'All Jobs', to: '/pm' },
       { icon: 'fa-file-lines', text: 'Service Form', to: '/pm/add' },
-      { icon: 'fa-layer-group', text: 'Strip Down', to: '/maintenance/strip-down' }
+      { icon: 'fa-layer-group', text: 'Strip Down', to: '/pm/strip-down' }
     ]
   },
   { 
     label: 'Asset Lifecycle', 
     items: [
-      { icon: 'fa-box-archive', text: 'Retirements', to: '/retirements' },
-      { icon: 'fa-earth-asia', text: 'Regions & Agents', to: '/regions-agents' }
+      { icon: 'fa-box-archive', text: 'Retirements', to: '/tools/retirements' },
+      // { icon: 'fa-earth-asia', text: 'Regions & Agents', to: '/regions-agents' }
     ]
   }
 ];
