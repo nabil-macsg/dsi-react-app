@@ -4,6 +4,7 @@ import "./Dispatch.scss";
 
 import Layout from "../../components/Layout";
 import Header from "../../components/Header";
+import { useNavigate } from "react-router-dom";
 
 const selectedTools = [
   {
@@ -102,7 +103,7 @@ export default function AddDispatch() {
   };
 
   const completedChecks = checks.filter((c) => c.checked).length;
-
+const navigate = useNavigate();
   return (
     <Layout>
       <Header
@@ -117,17 +118,17 @@ export default function AddDispatch() {
       </div>}
         rightContent={
           <>
-            <button className="cancel-btn">
+            <button className="cancel-btn"  onClick={() => navigate(-1)}>
               <i className="fa-solid fa-xmark"></i>
               Cancel
             </button>
 
-            <button className="draft-btn">
+            <button className="draft-btn"  onClick={() => navigate(-1)}>
               <i className="fa-regular fa-floppy-disk"></i>
               Save Draft
             </button>
 
-            <button className="submit-btn" disabled>
+            <button className="submit-btn" disabled  onClick={() => navigate(-1)}>
               <i className="fa-solid fa-paper-plane"></i>
               Initiate Dispatch
             </button>
