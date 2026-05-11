@@ -10,6 +10,11 @@ import StripDown from './pages/PM/StripDown'
 import Movements from './pages/Tools/Movements'
 import RepositoryInsights from './pages/Tools/RepositoryInsights'
 import AddTool from './pages/Tools/AddTool'
+import AllPm from './pages/PM/AllPm'
+import AllDispatch from './pages/Tools/AllDispatch'
+import Receipts from './pages/Tools/Receipts'
+import Retirements from './pages/Tools/Retirements'
+import AddRetirement from './pages/Tools/AddRetirement'
 
 export default function App() {
   const appRouter = createBrowserRouter([
@@ -33,26 +38,45 @@ export default function App() {
       path:"/repository-insights",
       element:<RepositoryInsights/>
     },
-    
     {
-      path:"dispatch/add",
+      path:"/dispatch/all",
+      element:<AllDispatch/>
+    },
+    {
+      path:"/dispatch/add",
       element:<AddDispatch/>
     },
     {
-      path:"pm/add",
+      path:"/pm",
+      element:<AllPm/>
+    },
+    {
+      path:"/pm/add",
       element:<AddPm/>
     },
     {
-      path:"pm/stripdown",
+      path:"/pm/strip-down",
       element:<StripDown/>
     },
+     {
+      path:"/receipts",
+      element:<Receipts/>
+    },
     {
-      path:"reciept/add",
+      path:"/receipt/detail",
       element:<ReceiptForm/>
     },
      {
       path:"/movements",
       element:<Movements/>
+    },
+     {
+      path:"/tools/retirements",
+      element:<Retirements/>
+    },
+     {
+      path:"/tools/retirements/add",
+      element:<AddRetirement/>
     }
   ])
   return (

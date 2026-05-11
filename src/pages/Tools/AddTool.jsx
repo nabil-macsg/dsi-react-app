@@ -12,131 +12,176 @@ export default function AddTool() {
   return (
     <Layout>
       <Header
-            title={null}
-              breadcrumb={<div className="breadcrumb">
-              <i className="fa fa-screwdriver-wrench" ></i>
-              Tools
-            
-              <i className="fa-solid fa-chevron-right" ></i>
-              <span>New Tool</span>
-            </div>}
-              rightContent={
-                <>
-                  <button className="cancel-btn">
-                    <i className="fa-solid fa-xmark"></i>
-                    Cancel
-                  </button>
-      
-                  <button className="draft-btn">
-                    <i className="fa-regular fa-floppy-disk"></i>
-                    Save Draft
-                  </button>
-      
-                  <button className="submit-btn" disabled>
-                    <i className="fa-solid fa-paper-plane"></i>
-                   Submit Tool
-                  </button>
-                </>
-              }
-            />
+        title={null}
+        breadcrumb={<div className="breadcrumb">
+          <i className="fa fa-screwdriver-wrench" ></i>
+          Tools
+
+          <i className="fa-solid fa-chevron-right" ></i>
+          <span>New Tool</span>
+        </div>}
+        rightContent={
+          <>
+            <button className="cancel-btn">
+              <i className="fa-solid fa-xmark"></i>
+              Cancel
+            </button>
+
+            <button className="draft-btn">
+              <i className="fa-regular fa-floppy-disk"></i>
+              Save Draft
+            </button>
+
+            <button className="submit-btn" disabled>
+              <i className="fa-solid fa-paper-plane"></i>
+              Submit Tool
+            </button>
+          </>
+        }
+      />
       <div className="scroll-body">
         <div className="tools-page">
-            <div className="card">
-              <div className="card-body">
+          <div className="card">
 
-  <div className="form-grid grid-3">
-    <div className="form-field">
-      <label>Serial Number <span className="required">*</span></label>
-      <input type="text" placeholder="e.g. HYD475BP112" />
-    </div>
+            <div className="card-body">
 
-    <div className="form-field">
-      <label>Type <span className="required">*</span></label>
-      <select>
-        <option value="">Select Type</option>
-        <option value="PBL Sub">PBL Sub</option>
-        <option value="PBL High Flow">PBL High Flow</option>
-        <option value="PBL Activator">PBL Activator</option>
-      </select>
-    </div>
+              <div className="form-grid grid-2">
 
-    <div className="form-field">
-      <label>Size <span className="required">*</span></label>
-      <select>
-        <option value="">Select Size</option>
-        <option value='4-3/4"'>4-3/4"</option>
-        <option value='5-1/4"'>5-1/4"</option>
-        <option value='6-3/4"'>6-3/4"</option>
-        <option value='8-1/4"'>8-1/4"</option>
-        <option value='9-1/2"'>9-1/2"</option>
-      </select>
-    </div>
-  </div>
 
-  <div className="form-grid grid-3">
-    <div className="form-field">
-      <label>Region <span className="required">*</span></label>
-      <select>
-        <option value="">Select Region</option>
-        <option value="Middle East">Middle East</option>
-        <option value="Central Asia">Central Asia</option>
-        <option value="South Asia">South Asia</option>
-        <option value="Africa">Africa</option>
-      </select>
-    </div>
 
-    <div className="form-field">
-      <label>Agent / Location <span className="required">*</span></label>
-      <select>
-        <option value="">Select Agent</option>
-        <option value="DSI FZE Yard">DSI FZE Yard</option>
-        <option value="Zhigermunai Service LLP">Zhigermunai Service LLP</option>
-        <option value="ADES Group">ADES Group</option>
-        <option value="Target Energy">Target Energy</option>
-        <option value="Saipem Nigeria">Saipem Nigeria</option>
-      </select>
-    </div>
+                <div className="form-field">
+                  <label>Tool Name <span className="required">*</span></label>
+                  <input type="text" placeholder="Enter tool name" />
+                </div>
 
-    <div className="form-field">
-      <label>Current Status <span className="required">*</span></label>
-      <select>
-        <option value="In storage">In Storage</option>
-        <option value="In field">In Field</option>
-        <option value="Under maintenance">Under Maintenance</option>
-        <option value="Pending retirement">Pending Retirement</option>
-      </select>
-    </div>
-  </div>
+                <div className="form-field">
+                  <label>Tool Category <span className="required">*</span></label>
+                  <select>
+                    <option value="">Select Category</option>
+                    <option value="PBL Tool">PBL Tool</option>
+                    <option value="Downhole Tool">Downhole Tool</option>
+                    <option value="Spare Part">Spare Part</option>
+                    <option value="Accessory">Accessory</option>
+                  </select>
+                </div>
+                <div className="form-field">
+                  <label>Business Unit <span className="required">*</span></label>
+                  <select>
+                    <option value="">Select Business Unit</option>
+                    <option value="DSI FZE">DSI FZE</option>
+                    <option value="DSI Nigeria">DSI Nigeria</option>
+                    <option value="DSI Asia">DSI Asia</option>
+                  </select>
+                </div>
+                
+                <div className="form-field">
+                  <label>Functional Location <span className="required">*</span></label>
+                  <select>
+                    <option value="">Select Functional Location</option>
+                    <option value="Yard - Shelf A3">Yard - Shelf A3</option>
+                    <option value="Yard - Shelf B1">Yard - Shelf B1</option>
+                    <option value="Field - Agent">Field - Agent</option>
+                  </select>
+                </div>
 
-  <div className="form-grid grid-3">
-    <div className="form-field">
-      <label>Last Service Date</label>
-      <input type="date" />
-    </div>
+                <div className="form-field">
+                  <label>Tool Type <span className="required">*</span></label>
+                  <select>
+                    <option value="">Select Tool Type</option>
+                    <option value="PBL Sub">PBL Sub</option>
+                    <option value="PBL High Flow">PBL High Flow</option>
+                    <option value="PBL Activator">PBL Activator</option>
+                  </select>
+                </div>
+                <div className="form-field">
+                  <label>Manufacturer <span className="required">*</span></label>
+                  <input type="text" placeholder="e.g. Hydra" />
+                </div>
+              </div>
 
-    <div className="form-field">
-      <label>Next Due Date <span className="required">*</span></label>
-      <input type="date" />
-    </div>
+             
+              <div className="form-grid grid-2">
 
-    <div className="form-field">
-      <label>Tool Value (USD)</label>
-      <input type="text" placeholder="e.g. 42500" />
-    </div>
-  </div>
 
-  <div className="form-field" >
-    <label>Notes / Remarks</label>
-    <textarea 
-      rows="3" 
-      placeholder="Add any additional information about the tool..."
-    ></textarea>
-  </div>
+                <div className="form-field">
+                  <label>Model Number</label>
+                  <input type="text" placeholder="e.g. HYD-675BP" />
+                </div>
 
-  
+                <div className="form-field">
+                  <label>Serial Number <span className="required">*</span></label>
+                  <input type="text" placeholder="e.g. HYD475BP112" />
+                </div>
+                <div className="form-field">
+                  <label>Part Number</label>
+                  <input type="text" placeholder="Enter part number" />
+                </div>
+                 <div className="form-field">
+                  <label>Tool Status <span className="required">*</span></label>
+                  <select>
+                    <option value="">Select Status</option>
+                    <option value="In Storage">In Storage</option>
+                    <option value="In Field">In Field</option>
+                    <option value="Under Maintenance">Under Maintenance</option>
+                    <option value="Pending Retirement">Pending Retirement</option>
+                    <option value="Retired">Retired</option>
+                  </select>
+                </div>
+              </div>
 
-</div>
+              <div className="form-grid grid-2">
+                <div className="form-field">
+                  <label>Tool Condition <span className="required">*</span></label>
+                  <select>
+                    <option value="">Select Condition</option>
+                    <option value="Excellent">Excellent</option>
+                    <option value="Good">Good</option>
+                    <option value="Fair">Fair</option>
+                    <option value="Worn">Worn</option>
+                    <option value="Scrap">Scrap</option>
+                  </select>
+                </div>
+                <div className="form-field">
+                  <label>Ownership Type <span className="required">*</span></label>
+                  <select>
+                    <option value="">Select Ownership</option>
+                    <option value="Company Owned">Company Owned</option>
+                    <option value="Rented">Rented</option>
+                    <option value="Leased">Leased</option>
+                    <option value="Customer Owned">Customer Owned</option>
+                  </select>
+                </div>
+              </div>
+
+
+              <div className="form-field" style={{ marginTop: "16px" }}>
+                <label>Tool Description</label>
+                <textarea
+                  rows="4"
+                  placeholder="Enter detailed description of the tool..."
+                ></textarea>
+              </div>
+              <div className="form-field" style={{ marginTop: "16px" }}>
+                <label>Attachments</label>
+                <div className="photo-grid">
+
+                  <div className="photo-box">
+                    <i className="fa-solid fa-camera"></i>
+
+                    <span>
+                      Add Tools Photos
+                      <input type="file"  style={{opacity:0}}/>
+                    </span>
+                  </div>
+                </div>
+              </div>
+             
             </div>
+
+
+
+
+          </div>
 
         </div>
       </div>
