@@ -1,1 +1,290 @@
-/* Reserved for module specific styles */
+.platform-landing {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(192, 57, 43, 0.18), transparent 28%),
+        radial-gradient(circle at 85% 70%, rgba(192, 57, 43, 0.38), transparent 34%),
+        linear-gradient(135deg, #0f172a 0%, #111827 45%, #421b1b 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "DM Sans", sans-serif;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.platform-landing::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.65), transparent);
+}
+
+.landing-content {
+    width: 100%;
+    max-width: 1080px;
+    position: relative;
+    z-index: 1;
+}
+
+.landing-header {
+    text-align: center;
+    margin-bottom: 42px;
+}
+
+.brand-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    margin-bottom: 28px;
+}
+
+.macsg-main-logo {
+    width: 82px;
+    height: 82px;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.28));
+}
+
+.landing-logo {
+    width: 82px;
+    height: 82px;
+    background: linear-gradient(145deg, #d84335, #a9271d);
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 28px;
+    font-weight: 800;
+    box-shadow: 0 18px 38px rgba(192, 57, 43, 0.35);
+}
+
+.landing-header h1 {
+    color: #fff;
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    margin-bottom: 10px;
+}
+
+.landing-header p {
+    color: rgba(255, 255, 255, 0.68);
+    font-size: 16px;
+}
+
+.platform-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.platform-card {
+    background: rgba(255, 255, 255, 0.96);
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    border-radius: 28px;
+    padding: 32px;
+    min-height: 305px;
+    box-shadow: 0 26px 70px rgba(0, 0, 0, 0.24);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    transition: 0.22s ease;
+}
+
+
+.platform-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 34px 90px rgba(0, 0, 0, 0.32);
+}
+
+.platform-top {
+    margin-bottom: 22px;
+    position: relative;
+    z-index: 1;
+}
+
+.platform-logo {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+}
+
+.platform-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 0;
+}
+
+.platform-icon.aegis {
+    background: #111827;
+}
+
+.platform-icon.dsi {
+    background: #c0392b;
+    box-shadow: 0 14px 32px rgba(192, 57, 43, 0.25);
+}
+
+.platform-card h2 {
+    position: relative;
+    z-index: 1;
+    font-size: 24px;
+    color: #111827;
+    font-weight: 800;
+    margin-bottom: 10px;
+    letter-spacing: -0.02em;
+}
+
+.platform-card p {
+    position: relative;
+    z-index: 1;
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.65;
+    max-width: 430px;
+    margin-bottom: 28px;
+}
+
+.platform-card button {
+    position: relative;
+    z-index: 1;
+    margin-top: auto;
+    height: 48px;
+    border: none;
+    border-radius: 14px;
+    background: #c0392b;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.18s ease;
+}
+
+.platform-card button:hover {
+    background: #96281b;
+}
+
+.platform-card:first-child button {
+    background: #111827;
+}
+
+.platform-card:first-child button:hover {
+    background: #020617;
+}
+
+@media (max-width: 900px) {
+    .platform-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .landing-header h1 {
+        font-size: 34px;
+    }
+}
+
+
+.dsi-login-page {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(192, 57, 43, 0.18), transparent 28%),
+        radial-gradient(circle at 85% 70%, rgba(192, 57, 43, 0.38), transparent 34%),
+        linear-gradient(135deg, #0f172a 0%, #111827 45%, #421b1b 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "DM Sans", sans-serif;
+    padding: 40px;
+}
+
+.login-card {
+    width: 420px;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 28px;
+    padding: 38px;
+    box-shadow: 0 26px 70px rgba(0, 0, 0, 0.28);
+    text-align: center;
+}
+
+.login-card .login-logo {
+    width: 78px;
+    height: 78px;
+    margin: 0 auto 20px;
+    background: linear-gradient(145deg, #d84335, #a9271d);
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 800;
+}
+
+.login-card h1 {
+    font-size: 28px;
+    color: #111827;
+    margin-bottom: 6px;
+}
+
+.login-card p {
+    font-size: 14px;
+    color: #64748b;
+    margin-bottom: 28px;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 13px;
+    color: #374151;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.form-group input {
+    width: 100%;
+    height: 46px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 0 14px;
+    font-size: 14px;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #c0392b;
+    box-shadow: 0 0 0 3px rgba(192, 57, 43, 0.12);
+}
+
+.login-btn {
+    width: 100%;
+    height: 48px;
+    border: none;
+    border-radius: 14px;
+    background: #c0392b;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background: #96281b;
+}

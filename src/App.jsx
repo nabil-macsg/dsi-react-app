@@ -1,7 +1,7 @@
-import Layout from './components/Layout'
-import Dashboard from './pages/Tools/Dashboard'
 import './App.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+
+import Dashboard from './pages/Tools/Dashboard'
 import Tools from './pages/Tools/Tools'
 import AddDispatch from './pages/Tools/AddDispatch'
 import AddPm from './pages/PM/AddPm'
@@ -17,76 +17,81 @@ import Retirements from './pages/Tools/Retirements'
 import AddRetirement from './pages/Tools/AddRetirement'
 import SpareParts from './pages/Tools/SpareParts'
 
+import Landing from './pages/Landing'
+import Login from './pages/Login'
+
 export default function App() {
+
   const appRouter = createBrowserRouter([
     {
-      path:"/",
-      element:<Dashboard/>
+      path: '/',
+      element: <Landing />
     },
     {
-      path:"/tools",
-      element:<Tools/>
-    },
-     {
-      path:"/tools/add",
-      element:<AddTool/>
+      path: '/dsi-login',
+      element: <Login />
     },
     {
-      path:"/movements",
-      element:<Movements/>
+      path: '/dashboard',
+      element: <Dashboard />
     },
     {
-      path:"/repository-insights",
-      element:<RepositoryInsights/>
+      path: '/tools',
+      element: <Tools />
     },
     {
-      path:"/dispatch/all",
-      element:<AllDispatch/>
+      path: '/tools/add',
+      element: <AddTool />
     },
     {
-      path:"/dispatch/add",
-      element:<AddDispatch/>
+      path: '/movements',
+      element: <Movements />
     },
     {
-      path:"/pm",
-      element:<AllPm/>
+      path: '/repository-insights',
+      element: <RepositoryInsights />
     },
     {
-      path:"/pm/add",
-      element:<AddPm/>
+      path: '/dispatch/all',
+      element: <AllDispatch />
     },
     {
-      path:"/pm/strip-down",
-      element:<StripDown/>
+      path: '/dispatch/add',
+      element: <AddDispatch />
     },
     {
-      path:"/pm/spareparts",
-      element:<SpareParts/>
-    },
-     {
-      path:"/receipts",
-      element:<Receipts/>
+      path: '/pm',
+      element: <AllPm />
     },
     {
-      path:"/receipt/detail",
-      element:<ReceiptForm/>
+      path: '/pm/add',
+      element: <AddPm />
     },
-     {
-      path:"/movements",
-      element:<Movements/>
+    {
+      path: '/pm/strip-down',
+      element: <StripDown />
     },
-     {
-      path:"/tools/retirements",
-      element:<Retirements/>
+    {
+      path: '/pm/spareparts',
+      element: <SpareParts />
     },
-     {
-      path:"/tools/retirements/add",
-      element:<AddRetirement/>
+    {
+      path: '/receipts',
+      element: <Receipts />
+    },
+    {
+      path: '/receipt/detail',
+      element: <ReceiptForm />
+    },
+    {
+      path: '/tools/retirements',
+      element: <Retirements />
+    },
+    {
+      path: '/tools/retirements/add',
+      element: <AddRetirement />
     }
   ])
-  return (
-<RouterProvider router={appRouter}>
 
-</RouterProvider>
-  )
+  return <RouterProvider router={appRouter} />
 }
