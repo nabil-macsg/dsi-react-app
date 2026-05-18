@@ -80,7 +80,7 @@ const Landing = () => {
                         <h2>DSI Asset Management</h2>
 
                         <p>
-                            Access tool repository, maintenance, movements and lifecycle management.
+                            Access tool repository, movements and lifecycle management.
                         </p>
 
                         <button onClick={openDsi}>
@@ -125,7 +125,7 @@ const Landing = () => {
                         <h2>Safety Culture</h2>
 
                         <p>
-                            Access safety operations, visitor management, incident monitoring and compliance workflows.
+                            Access Safety Culture reporting.
                         </p>
 
                         <button
