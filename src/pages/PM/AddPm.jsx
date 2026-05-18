@@ -2,8 +2,8 @@ import React, { useState } from "react";
 
 import "./Pm.scss";
 
-import Layout from "../../components/Layout";
-import Header from "../../components/Header";
+import Layout from "../../components/LayoutPM";
+import Header from "../../components/HeaderPM";
 
 const stepsData = [
   {
@@ -125,9 +125,9 @@ export default function AddPm() {
       prev.map((item) =>
         item.id === id
           ? {
-              ...item,
-              checked: !item.checked,
-            }
+            ...item,
+            checked: !item.checked,
+          }
           : item
       )
     );
@@ -515,11 +515,10 @@ export default function AddPm() {
                   {checks.map((item) => (
                     <div
                       key={item.id}
-                      className={`check-item ${
-                        item.checked
+                      className={`check-item ${item.checked
                           ? "checked"
                           : ""
-                      }`}
+                        }`}
                     >
 
                       <input

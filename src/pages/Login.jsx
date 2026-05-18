@@ -15,8 +15,8 @@ const Login = () => {
             <div className="login-card">
                 <div className="login-logo">DSI</div>
 
-                <h1>DSI PBL Platform</h1>
-                <p>Tool Management System</p>
+                <h1>DSI Asset Management</h1>
+                <p>Asset Management System</p>
 
                 <form onSubmit={handleLogin}>
                     <div className="form-group">

@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import "./Pm.scss"; // We'll create this
-import Layout from "../../components/Layout";
-import Header from "../../components/Header";
+import Layout from "../../components/LayoutPM";
+import Header from "../../components/HeaderPM";
 import { Link } from "react-router-dom";
 
 const maintenanceData = [

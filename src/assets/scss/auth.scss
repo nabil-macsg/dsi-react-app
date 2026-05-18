@@ -2,7 +2,7 @@
     min-height: 100vh;
     background:
         radial-gradient(circle at 20% 20%, rgba(192, 57, 43, 0.18), transparent 28%),
-        radial-gradient(circle at 85% 70%, rgba(192, 57, 43, 0.38), transparent 34%),
+        radial-gradient(circle at 85% 70%, rgba(37, 99, 235, 0.28), transparent 34%),
         linear-gradient(135deg, #0f172a 0%, #111827 45%, #421b1b 100%);
     display: flex;
     align-items: center;
@@ -26,7 +26,7 @@
 
 .landing-content {
     width: 100%;
-    max-width: 1080px;
+    max-width: 1180px;
     position: relative;
     z-index: 1;
 }
@@ -80,121 +80,109 @@
 
 .platform-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 28px;
+    margin-top: 50px;
 }
 
 .platform-card {
-    background: rgba(255, 255, 255, 0.96);
-    border: 1px solid rgba(255, 255, 255, 0.22);
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 28px;
-    padding: 32px;
-    min-height: 305px;
-    box-shadow: 0 26px 70px rgba(0, 0, 0, 0.24);
+    padding: 34px 30px;
+    min-height: 335px;
+    backdrop-filter: blur(14px);
+    text-align: center;
     display: flex;
     flex-direction: column;
-    position: relative;
-    overflow: hidden;
-    transition: 0.22s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 26px 70px rgba(0, 0, 0, 0.24);
 }
-
 
 .platform-card:hover {
     transform: translateY(-6px);
+    border-color: rgba(255, 255, 255, 0.18);
     box-shadow: 0 34px 90px rgba(0, 0, 0, 0.32);
 }
 
 .platform-top {
-    margin-bottom: 22px;
-    position: relative;
-    z-index: 1;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
 }
 
 .platform-logo {
-    width: 70px;
-    height: 70px;
+    width: 84px;
+    height: 84px;
     object-fit: contain;
 }
 
 .platform-icon {
-    width: 70px;
-    height: 70px;
-    border-radius: 18px;
+    width: 84px;
+    height: 84px;
+    border-radius: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
-    font-size: 24px;
     font-weight: 800;
-    margin-bottom: 0;
-}
-
-.platform-icon.aegis {
-    background: #111827;
+    font-size: 28px;
+    color: #fff;
 }
 
 .platform-icon.dsi {
-    background: #c0392b;
-    box-shadow: 0 14px 32px rgba(192, 57, 43, 0.25);
+    background: linear-gradient(135deg, #d84335, #b91c1c);
+    box-shadow: 0 14px 35px rgba(220, 38, 38, 0.35);
+}
+
+.platform-icon.security {
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    color: #60a5fa;
+    box-shadow: 0 14px 35px rgba(37, 99, 235, 0.35);
 }
 
 .platform-card h2 {
-    position: relative;
-    z-index: 1;
-    font-size: 24px;
-    color: #111827;
-    font-weight: 800;
-    margin-bottom: 10px;
-    letter-spacing: -0.02em;
+    color: #ffffff;
+    font-size: 23px;
+    font-weight: 700;
+    margin-bottom: 14px;
 }
 
 .platform-card p {
-    position: relative;
-    z-index: 1;
-    color: #64748b;
+    color: rgba(255, 255, 255, 0.72);
     font-size: 15px;
-    line-height: 1.65;
-    max-width: 430px;
+    line-height: 1.7;
     margin-bottom: 28px;
+    min-height: 78px;
 }
 
 .platform-card button {
-    position: relative;
-    z-index: 1;
+    width: 100%;
     margin-top: auto;
-    height: 48px;
     border: none;
     border-radius: 14px;
-    background: #c0392b;
-    color: #fff;
-    font-size: 14px;
+    padding: 14px 18px;
+    font-size: 15px;
     font-weight: 700;
     cursor: pointer;
-    transition: 0.18s ease;
+    transition: all 0.25s ease;
+    background: linear-gradient(135deg, #c0392b, #e74c3c);
+    color: #fff;
 }
 
 .platform-card button:hover {
-    background: #96281b;
+    transform: translateY(-2px);
 }
 
-.platform-card:first-child button {
-    background: #111827;
+.aegis-btn {
+    background: linear-gradient(135deg, #d4a017, #facc15) !important;
+    color: #1f2937 !important;
 }
 
-.platform-card:first-child button:hover {
-    background: #020617;
+.security-btn {
+    background: linear-gradient(135deg, #2563eb, #3b82f6) !important;
 }
 
-@media (max-width: 900px) {
-    .platform-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .landing-header h1 {
-        font-size: 34px;
-    }
-}
-
+/* DSI LOGIN */
 
 .dsi-login-page {
     min-height: 100vh;
@@ -265,6 +253,7 @@
     padding: 0 14px;
     font-size: 14px;
     outline: none;
+    box-sizing: border-box;
 }
 
 .form-group input:focus {
@@ -283,8 +272,94 @@
     font-weight: 800;
     margin-top: 8px;
     cursor: pointer;
+    transition: all 0.2s ease;
 }
 
 .login-btn:hover {
     background: #96281b;
+}
+
+/* SECURITY LOGIN */
+
+.security-login-page {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 20% 20%, rgba(37, 99, 235, 0.22), transparent 30%),
+        radial-gradient(circle at 85% 75%, rgba(59, 130, 246, 0.28), transparent 35%),
+        linear-gradient(135deg, #020617 0%, #0f172a 45%, #1e3a8a 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "DM Sans", sans-serif;
+    padding: 40px;
+}
+
+.security-login-card {
+    border: 1px solid rgba(96, 165, 250, 0.22);
+    box-shadow: 0 28px 80px rgba(37, 99, 235, 0.22);
+}
+
+.security-login-logo {
+    width: 82px;
+    height: 82px;
+    border-radius: 24px;
+    margin: 0 auto 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    color: #60a5fa;
+    box-shadow: 0 16px 40px rgba(37, 99, 235, 0.35);
+}
+
+.security-login-card .form-group input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.14);
+}
+
+.security-login-btn {
+    background: linear-gradient(135deg, #2563eb, #3b82f6) !important;
+    box-shadow: 0 14px 34px rgba(37, 99, 235, 0.32);
+}
+
+.security-login-btn:hover {
+    background: linear-gradient(135deg, #1d4ed8, #2563eb) !important;
+}
+
+@media (max-width: 1100px) {
+    .landing-content {
+        max-width: 520px;
+    }
+
+    .platform-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .platform-landing,
+    .dsi-login-page,
+    .security-login-page {
+        padding: 24px;
+    }
+
+    .landing-header h1 {
+        font-size: 34px;
+    }
+
+    .brand-row {
+        gap: 16px;
+    }
+
+    .macsg-main-logo,
+    .landing-logo {
+        width: 70px;
+        height: 70px;
+    }
+
+    .login-card {
+        width: 100%;
+        padding: 32px 24px;
+    }
 }

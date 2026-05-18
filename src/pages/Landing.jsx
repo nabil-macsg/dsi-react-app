@@ -14,6 +14,10 @@ const Landing = () => {
         window.location.href = "/dsi-login";
     };
 
+    const openSecurity = () => {
+        window.location.href = "/security-login";
+    };
+
     return (
         <div className="platform-landing">
             <div className="landing-content">
@@ -44,6 +48,7 @@ const Landing = () => {
 
                 <div className="platform-grid">
 
+                    {/* AEGIS */}
                     <div className="platform-card">
                         <div className="platform-top">
                             <img
@@ -59,11 +64,12 @@ const Landing = () => {
                             Access enterprise HSE, risk, audit, PTW, training and operational workflows.
                         </p>
 
-                        <button onClick={openAegis}>
+                        <button className="aegis-btn" onClick={openAegis}>
                             Continue to Aegis
                         </button>
                     </div>
 
+                    {/* DSI */}
                     <div className="platform-card">
                         <div className="platform-top">
                             <div className="platform-icon dsi">
@@ -71,14 +77,62 @@ const Landing = () => {
                             </div>
                         </div>
 
-                        <h2>DSI PBL Platform</h2>
+                        <h2>DSI Asset Management</h2>
 
                         <p>
                             Access tool repository, maintenance, movements and lifecycle management.
                         </p>
 
                         <button onClick={openDsi}>
-                            Continue to DSI Platform
+                            Continue to Asset Management
+                        </button>
+                    </div>
+
+                    {/* SECURITY */}
+                    <div className="platform-card">
+                        <div className="platform-top">
+                            <div className="platform-icon security">
+                                <svg
+                                    width="42"
+                                    height="42"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path
+                                        d="M12 2L4 5V11C4 16.55 7.84 21.74 12 23C16.16 21.74 20 16.55 20 11V5L12 2Z"
+                                        fill="currentColor"
+                                        opacity="0.18"
+                                    />
+                                    <path
+                                        d="M12 2L4 5V11C4 16.55 7.84 21.74 12 23C16.16 21.74 20 16.55 20 11V5L12 2Z"
+                                        stroke="currentColor"
+                                        strokeWidth="1.8"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                    />
+                                    <path
+                                        d="M9 12L11 14L15 10"
+                                        stroke="currentColor"
+                                        strokeWidth="1.8"
+                                        strokeLinecap="round"
+                                        strokeLinejoin="round"
+                                    />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <h2>Safety Culture</h2>
+
+                        <p>
+                            Access safety operations, visitor management, incident monitoring and compliance workflows.
+                        </p>
+
+                        <button
+                            className="security-btn"
+                            onClick={openSecurity}
+                        >
+                            Continue to Safety Culture
                         </button>
                     </div>
 

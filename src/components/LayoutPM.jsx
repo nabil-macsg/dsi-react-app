@@ -1,4 +1,4 @@
-import Sidebar from './Sidebar'
+import Sidebar from './SidebarPM'
 
 
 export default function Layout({ children, header }) {

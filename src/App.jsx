@@ -16,6 +16,7 @@ import Receipts from './pages/Tools/Receipts'
 import Retirements from './pages/Tools/Retirements'
 import AddRetirement from './pages/Tools/AddRetirement'
 import SpareParts from './pages/Tools/SpareParts'
+import SecurityLogin from './pages/SecurityLogin'
 
 import Landing from './pages/Landing'
 import Login from './pages/Login'
@@ -30,6 +31,10 @@ export default function App() {
     {
       path: '/dsi-login',
       element: <Login />
+    },
+    {
+      path: '/security-login',
+      element: <SecurityLogin />
     },
     {
       path: '/dashboard',

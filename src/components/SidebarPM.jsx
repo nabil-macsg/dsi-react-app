@@ -2,36 +2,13 @@ import { Link } from 'react-router-dom';
 
 const sections = [
   {
-    label: 'Overview',
+    label: 'Maintenance',
     items: [
-      { icon: 'fa-gauge-high', text: 'Dashboard', active: true, to: '/' },
-      // { icon: 'fa-bell', text: 'Alerts', badge: '3', alert: true, to: '/alerts' }
+      { icon: 'fa-gear', text: 'All Jobs', to: '/pm' },
+      { icon: 'fa-file-lines', text: 'Service Form', to: '/pm/add' },
+      { icon: 'fa-layer-group', text: 'Strip Down', to: '/pm/strip-down' }
     ]
   },
-  {
-    label: 'Tool Repository',
-    items: [
-      { icon: 'fa-screwdriver-wrench', text: 'All Tools', to: '/tools' },           // ← as requested
-      { icon: 'fa-chart-pie', text: 'Repository Insights', to: '/repository-insights' },
-      { icon: 'fa-circle-plus', text: 'Register Tool', to: '/tools/add' }
-    ]
-  },
-  {
-    label: 'Tool Movement',
-    items: [
-      { icon: 'fa-truck', text: 'Movements', badge: '7', to: '/movements' },
-      { icon: 'fa-paper-plane', text: 'All Dispatch', to: '/dispatch/all' },
-      { icon: 'fa-receipt', text: 'Acknowledges and Receipts', to: '/receipts' },
-      { icon: 'fa-boxes-stacked', text: 'Spare Parts', to: '/pm/spareparts' }
-    ]
-  },
-  {
-    label: 'Asset Lifecycle',
-    items: [
-      { icon: 'fa-box-archive', text: 'Retirements', to: '/tools/retirements' },
-      // { icon: 'fa-earth-asia', text: 'Regions & Agents', to: '/regions-agents' }
-    ]
-  }
 ];
 
 export default function Sidebar() {
@@ -39,10 +16,42 @@ export default function Sidebar() {
     <aside className="sidebar">
       <div className="sidebar-logo">
         <div className="logo-wrap">
-          <div className="logo-mark">DSI</div>
+          <div
+            className="logo-mark"
+            style={{
+              color: '#2563eb',
+              background: 'rgba(37, 99, 235, 0.12)'
+            }}
+          ><svg
+            width="42"
+            height="42"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+              <path
+                d="M12 2L4 5V11C4 16.55 7.84 21.74 12 23C16.16 21.74 20 16.55 20 11V5L12 2Z"
+                fill="currentColor"
+                opacity="0.18"
+              />
+              <path
+                d="M12 2L4 5V11C4 16.55 7.84 21.74 12 23C16.16 21.74 20 16.55 20 11V5L12 2Z"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+              <path
+                d="M9 12L11 14L15 10"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg></div>
           <div className="logo-text-wrap">
-            <div className="logo-title">PBL Platform</div>
-            <div className="logo-sub">Tool Management System</div>
+            <div className="logo-title">Safety Culture</div>
+            <div className="logo-sub">Maintainence operations</div>
           </div>
         </div>
       </div>
@@ -73,7 +82,7 @@ export default function Sidebar() {
 
       <div className="sidebar-footer">
         <div className="user-row">
-          <div className="user-avatar">NU</div>
+          <div className="user-avatar blue-avatar">NU</div>
           <div className="user-details">
             <div className="user-name">Nabil Uchummal</div>
             <div className="user-role">QA Supervisor — DSI FZE</div>
