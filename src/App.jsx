@@ -17,6 +17,7 @@ import Retirements from './pages/Tools/Retirements'
 import AddRetirement from './pages/Tools/AddRetirement'
 import SpareParts from './pages/Tools/SpareParts'
 import SecurityLogin from './pages/SecurityLogin'
+import ToolDistribution from './pages/Tools/ToolDistribution'
 
 import Landing from './pages/Landing'
 import Login from './pages/Login'
@@ -47,6 +48,14 @@ export default function App() {
     {
       path: '/tools/add',
       element: <AddTool />
+    },
+    {
+      path: '/tools/add',
+      element: <AddTool />
+    },
+    {
+      path: '/tool-distribution',
+      element: <ToolDistribution />
     },
     {
       path: '/movements',

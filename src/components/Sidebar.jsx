@@ -13,7 +13,8 @@ const sections = [
     items: [
       { icon: 'fa-screwdriver-wrench', text: 'All Tools', to: '/tools' },           // ← as requested
       { icon: 'fa-chart-pie', text: 'Repository Insights', to: '/repository-insights' },
-      { icon: 'fa-circle-plus', text: 'Register Tool', to: '/tools/add' }
+      { icon: 'fa-circle-plus', text: 'Register Tool', to: '/tools/add' },
+      { icon: 'fa-map-location-dot', text: 'Tool Distribution', to: '/tool-distribution' },
     ]
   },
   {
